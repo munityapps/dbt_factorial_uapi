@@ -29,7 +29,7 @@ SELECT
     {{ var("table_prefix") }}_contracts.ends_on as contract_end_date,
     {{ var("table_prefix") }}_employees.gender as gender,
     {{ var("table_prefix") }}_contracts.job_title as business_unit,
-    NULL as employee_number,
+    {{ var("table_prefix") }}_employees.company_identifier as employee_number,
     {{ var("table_prefix") }}_contracts.fr_employee_type as contract_type,
     {{ var("table_prefix") }}_contracts.job_title as socio_professional_category,
     NULL as state
